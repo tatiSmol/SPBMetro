@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+  <appenders> <!--  куда пишется лог: в файл или в консоль-->
+    <File name="SearchFile" fileName="logs/search.log">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/> <!-- формат лог-файла -->
+<!--      <Filters>-->
+<!--        <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL" />-->
+<!--      </Filters>-->
+    </File>
+  </appenders>
+
+  <loggers>
+    <root level="info">
+      <appender-ref ref="SearchFile" level="info"/>
+    </root>
+  </loggers>
+</configuration>
